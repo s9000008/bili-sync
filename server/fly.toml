@@ -1,10 +1,10 @@
-# fly.toml app configuration file generated for bili-sync on 2026-05-13T11:15:05Z
+# fly.toml app configuration file generated for bili-sync on 2026-05-13T11:25:24Z
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
 app = 'bili-sync'
-primary_region = 'lax'
+primary_region = 'ams'
 
 [build]
 
@@ -16,11 +16,11 @@ primary_region = 'lax'
   min_machines_running = 1
 
   [[http_service.checks]]
-    grace_period = "10s"
-    interval = "15s"
-    method = "GET"
-    path = "/health"
-    timeout = "5s"
+    interval = '15s'
+    timeout = '5s'
+    grace_period = '10s'
+    method = 'GET'
+    path = '/health'
 
 [[vm]]
   size = 'shared-cpu-1x'
