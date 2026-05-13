@@ -173,9 +173,9 @@ app.get('/health', (_req, res) => {
 
 // ─── 啟動伺服器 ───────────────────────────────────────────────
 
-const PORT = process.env.PORT ?? 3001;
+const PORT = Number(process.env.PORT ?? 3001);
 
-httpServer.listen(PORT, () => {
+httpServer.listen(PORT, '0.0.0.0', () => {
   console.log(`[Bili-Sync Server] 監聽 port ${PORT}`);
   console.log(`健康檢查：http://localhost:${PORT}/health`);
 });
