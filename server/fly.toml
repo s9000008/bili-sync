@@ -1,5 +1,10 @@
+# fly.toml app configuration file generated for bili-sync on 2026-05-13T11:15:05Z
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
 app = 'bili-sync'
-primary_region = 'nrt'
+primary_region = 'lax'
 
 [build]
 
