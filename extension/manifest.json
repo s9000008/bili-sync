@@ -1,0 +1,39 @@
+{
+  "manifest_version": 3,
+  "name": "Bili-Sync",
+  "version": "0.1.0",
+  "description": "Bilibili 異地同步播放插件 – 讓你和朋友一起看影片",
+  "permissions": ["storage", "tabs", "activeTab"],
+  "host_permissions": [
+    "https://*.bilibili.com/*",
+    "http://localhost:3001/*"
+  ],
+  "background": {
+    "service_worker": "src/background/index.ts",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.bilibili.com/video/*",
+        "https://www.bilibili.com/bangumi/*"
+      ],
+      "js": ["src/content/index.ts"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "src/popup/index.html",
+    "default_title": "Bili-Sync",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}

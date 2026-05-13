@@ -1,0 +1,13 @@
+{
+  "name": "bili-sync",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": ["extension", "server"],
+  "scripts": {
+    "dev:server": "npm run dev --workspace=server",
+    "dev:ext": "npm run dev --workspace=extension",
+    "build:server": "npm run build --workspace=server",
+    "build:ext": "npm run build --workspace=extension",
+    "watch:ext": "npm run dev --workspace=extension"
+  }
+}
